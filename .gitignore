@@ -93,3 +93,5 @@ notebooks/*.xlsx
 notebooks/*.csv
 notebooks/*.bak
 livraisons-standalone-kitten-2.2.1/
+config/
+data/
