@@ -1,0 +1,30 @@
+variables:
+  KUBERNETES_CPU_REQUEST: "550m"
+  KUBERNETES_CPU_LIMIT: "1"
+  KUBERNETES_MEMORY_REQUEST: "550Mi"
+  KUBERNETES_MEMORY_LIMIT: "1Gi"
+
+stages:
+  - sync
+
+sync_master_to_target:
+  stage: sync
+  tags:
+    - data-ia-factory-p
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master" && $CI_PIPELINE_SOURCE == "push"'
+    - if: '$CI_COMMIT_BRANCH == "master" && $CI_PIPELINE_SOURCE == "web"'
+  before_script:
+    - git config --global user.email "aghiles.izouaouen@edf.fr"
+    - git config --global user.name "Aghiles IZOUAOUEN"
+  script:
+    
+    - >
+      TARGET_REPO_URL="https://${TARGET_GIT_USER}:${TARGET_GIT_PASSWORD}@${TARGET_GIT_HOST}/${TARGET_GIT_REPO}"
+    
+    - git fetch origin master
+    - git checkout master
+
+    - git remote add target "$TARGET_REPO_URL" || true
+
+    - git push target master

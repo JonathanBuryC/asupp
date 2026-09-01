@@ -1,0 +1,43 @@
+
+#!/usr/bin/env bash
+TARGET="uc202-rex-ipn"
+VERSION=$(uv version | awk '{print $2}')
+echo "Building image for ${TARGET} version ${VERSION} "
+RANDOM_HASH=$(echo $RANDOM | md5sum | head -c 20)
+# root directory from where the script is launched
+# omit the -p parameter
+# to create a temporary directory in the default location
+uv export --format requirements.txt --output-file requirements.txt --no-header --no-hashes|| echo "Poetry is not used in this project or Poetry is not installed"
+# remove sklearn package and let pip use scikit-learn
+# https://github.com/scikit-learn/sklearn-pypi-package
+sed -i '/sklearn==/d' requirements.txt
+export BUILD_IMAGE_REGISTRY=${BUILD_IMAGE_REGISTRY:-"registry.apps.caas-int-hp.automation.edf.fr/pud-usine-dap-grp-hp"}
+export BUILD_IMAGE_NAME=${BUILD_IMAGE_NAME:-"usecases_extended"}
+export BUILD_IMAGE_TAG_EXTRA_STRING=${BUILD_IMAGE_TAG_EXTRA_STRING-}
+export BUILD_IMAGE_TAG=${TARGET}-${VERSION}
+[[ -n $BUILD_IMAGE_TAG_EXTRA_STRING ]] && export BUILD_IMAGE_TAG="${BUILD_IMAGE_TAG}-${BUILD_IMAGE_TAG_EXTRA_STRING}"
+if [ -z "$NETRC" ]; then
+  if [ -n "$JUPYTERHUB_USER" ]; then
+    echo "Running inside JupyterHub, setting NETRC to the secrets path"
+    export NETRC=${NETRC:-/.netrc}
+  elif oc whoami &> /dev/null; then
+    echo "Downloading netrc file from oc secrets"
+    oc get secrets netrc-si-devops-si-mirrors -o go-template --template="{{.data.netrc|base64decode}}" > ".netrc"
+    export NETRC=".netrc"
+  else
+    echo -e "You must be logged in to the openshift cluster before building this image,
+    please run the following cmd using Gardian credentials: \n
+    oc login -u NNI --server=https://api.caas-int-hp.automation.edf.fr:6443"
+    exit 1
+  fi
+fi
+if [ -f "$BUILD_SCRIPT" ]; then
+  bash "$BUILD_SCRIPT" Dockerfile "${@:1}"
+else
+  docker build . \
+    -f Dockerfile \
+    --secret id=nexusauth,src=${NETRC} \
+    ${@:1} \
+    -t "${BUILD_IMAGE_REGISTRY}/${BUILD_IMAGE_NAME}:${BUILD_IMAGE_TAG}"
+fi
+echo "Image Name: ${BUILD_IMAGE_REGISTRY}/${BUILD_IMAGE_NAME}:${BUILD_IMAGE_TAG}"

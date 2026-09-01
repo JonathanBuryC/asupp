@@ -1,0 +1,95 @@
+777 B
+# Coverage.py
+htmlcov/
+reports/
+# cruft & template relevant files
+*.rej
+#saved plotly plots
+*.html
+# config
+secret.json
+secret-merlin.json
+secrets.json
+secret.ini 
+secrets.ini 
+.env
+params-pyspark.json
+user-credentials.json
+# Data
+*.csv*
+*.dat*
+*.pickle*
+*.xls*
+*.xlsx
+*.zip*
+# direnv
+.envrc
+# Hypothesis
+.hypothesis/
+# Jupyter
+#.ipynb
+.ipynb_checkpoints/
+#notebooks/
+# macOS
+.DS_Store
+# mypy
+.dmypy.json
+.mypy_cache/
+# Node.js
+node_modules/
+# Poetry
+.venv/
+dist/
+uc202-uv-env/
+uc202-venv/
+uc202_ipn_rex.egg-info/
+build/
+# PyCharm
+.idea/
+# pyenv
+.python-version
+# pytest
+.pytest_cache/
+# Python
+__pycache__/
+*.py[cdo]
+# Terraform
+.terraform/
+# tests
+# env activation
+.vscode/
+env_activate.ps1
+env_activate.sh
+# logs
+logs.log
+# pyspark
+metastore_db/
+derby.log
+# docs
+*.png
+# inputs
+inputs
+# toml
+auth.toml
+*.log
+#logs etc 
+.txt
+!requirements.txt
+
+
+#directory containing files for test
+example_files/
+temp_dir/
+/logs
+
+#folders inside notebooks (usually models for testing)
+notebooks/*/
+.netrc
+src/models/models/*/
+src/models/models/
+
+notebooks/*.json
+notebooks/*.xlsx
+notebooks/*.csv
+notebooks/*.bak
+livraisons-standalone-kitten-2.2.1/

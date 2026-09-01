@@ -1,0 +1,12 @@
+notebooks/
+.venv/
+.git
+.vscode
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+tests/
+*.md
+*.log

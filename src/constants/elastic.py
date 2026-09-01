@@ -1,0 +1,2 @@
+INDEX_NAME = "uc202-rex"
+MAX_WORKERS=32

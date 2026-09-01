@@ -1,0 +1,910 @@
+accelerate==1.7.0
+    # via
+    #   sentence-transformers
+    #   unstructured-inference
+adbc-driver-manager==1.6.0
+    # via
+    #   adbc-driver-sqlite
+    #   polars
+adbc-driver-sqlite==1.6.0
+    # via polars
+aiobotocore==2.24.2
+    # via
+    #   daptools
+    #   s3fs
+aiofiles==24.1.0
+    # via unstructured-client
+aiohappyeyeballs==2.6.1
+    # via aiohttp
+aiohttp==3.11.18
+    # via
+    #   aiobotocore
+    #   fsspec
+    #   langchain-community
+    #   s3fs
+aioitertools==0.12.0
+    # via aiobotocore
+aiosignal==1.3.2
+    # via aiohttp
+altair==5.5.0
+    # via polars
+annotated-types==0.7.0
+    # via pydantic
+antlr4-python3-runtime==4.9.3
+    # via omegaconf
+anyio==4.9.0
+    # via
+    #   httpx
+    #   openai
+    #   starlette
+appnope==0.1.4 ; sys_platform == 'darwin'
+    # via ipykernel
+argcomplete==3.6.2
+    # via textract
+arro3-core==0.5.1
+    # via deltalake
+asttokens==3.0.0
+    # via stack-data
+attrs==25.3.0
+    # via
+    #   aiohttp
+    #   jsonschema
+    #   referencing
+awswrangler==3.10.1 ; platform_machine == 'x86_64' and sys_platform == 'darwin'
+    # via daptools
+awswrangler==3.12.0 ; platform_machine != 'x86_64' or sys_platform != 'darwin'
+    # via daptools
+babel==2.17.0
+    # via great-tables
+backoff==2.2.1
+    # via unstructured
+beautifulsoup4==4.13.4
+    # via
+    #   textract
+    #   unstructured
+boto3==1.40.18
+    # via
+    #   awswrangler
+    #   daptools
+botocore==1.40.18
+    # via
+    #   aiobotocore
+    #   awswrangler
+    #   boto3
+    #   daptools
+    #   s3transfer
+cachetools==5.5.2
+    # via
+    #   google-auth
+    #   pyiceberg
+certifi==2024.12.14
+    # via
+    #   elastic-transport
+    #   httpcore
+    #   httpx
+    #   requests
+cffi==1.17.1
+    # via
+    #   cryptography
+    #   gevent
+    #   pyzmq
+    #   zstandard
+chardet==5.2.0
+    # via
+    #   textract
+    #   uc202-ipn-rex
+    #   unstructured
+charset-normalizer==3.4.2
+    # via
+    #   pdfminer-six
+    #   requests
+click==8.2.0
+    # via
+    #   nltk
+    #   pyiceberg
+    #   python-oxmsg
+    #   uvicorn
+cloudpickle==3.1.1
+    # via polars
+colorama==0.4.6 ; sys_platform == 'win32'
+    # via
+    #   click
+    #   ipython
+    #   loguru
+    #   tqdm
+coloredlogs==15.0.1
+    # via onnxruntime
+comm==0.2.2
+    # via ipykernel
+commonmark==0.9.1
+    # via great-tables
+configparser==6.0.1
+    # via daptools
+contourpy==1.3.2
+    # via matplotlib
+cryptography==45.0.2
+    # via
+    #   pdfminer-six
+    #   unstructured-client
+cycler==0.12.1
+    # via matplotlib
+daptools==2.6.4
+    # via uc202-ipn-rex
+dataclasses-json==0.6.7
+    # via
+    #   langchain-community
+    #   unstructured
+datasets==4.0.0
+    # via sentence-transformers
+debugpy==1.8.14
+    # via ipykernel
+decorator==5.2.1
+    # via ipython
+deltalake==1.0.2
+    # via polars
+deprecated==1.2.18
+    # via
+    #   deltalake
+    #   pikepdf
+dill==0.3.8
+    # via
+    #   datasets
+    #   multiprocess
+distro==1.9.0
+    # via openai
+docx2txt==0.9
+    # via
+    #   textract
+    #   uc202-ipn-rex
+dotenv==0.9.9
+    # via uc202-ipn-rex
+ebooklib==0.19
+    # via textract
+effdet==0.4.1
+    # via unstructured
+elastic-transport==8.17.1
+    # via elasticsearch
+elasticsearch==8.10.0
+    # via uc202-ipn-rex
+emoji==2.14.1
+    # via unstructured
+et-xmlfile==2.0.0
+    # via openpyxl
+executing==2.2.0
+    # via stack-data
+ezodf==0.3.2
+    # via uc202-ipn-rex
+faicons==0.2.2
+    # via great-tables
+fastapi==0.115.14
+    # via uc202-ipn-rex
+fastexcel==0.14.0
+    # via
+    #   daptools
+    #   polars
+filelock==3.18.0
+    # via
+    #   datasets
+    #   huggingface-hub
+    #   torch
+    #   transformers
+    #   triton
+filetype==1.2.0
+    # via unstructured
+flatbuffers==25.2.10
+    # via onnxruntime
+fonttools==4.58.0
+    # via matplotlib
+frozenlist==1.6.0
+    # via
+    #   aiohttp
+    #   aiosignal
+fsspec==2025.3.0
+    # via
+    #   daptools
+    #   datasets
+    #   huggingface-hub
+    #   polars
+    #   pyiceberg
+    #   s3fs
+    #   torch
+gevent==25.5.1
+    # via polars
+google-api-core==2.24.2
+    # via google-cloud-vision
+google-auth==2.40.1
+    # via
+    #   google-api-core
+    #   google-cloud-vision
+google-cloud-vision==3.10.1
+    # via unstructured
+googleapis-common-protos==1.70.0
+    # via
+    #   google-api-core
+    #   grpcio-status
+great-tables==0.17.0
+    # via polars
+greenlet==3.2.3 ; platform_machine == 'AMD64' or platform_machine == 'WIN32' or platform_machine == 'aarch64' or platform_machine == 'amd64' or platform_machine == 'ppc64le' or platform_machine == 'win32' or platform_machine == 'x86_64' or platform_python_implementation == 'CPython'
+    # via
+    #   gevent
+    #   sqlalchemy
+grpcio==1.71.0
+    # via
+    #   google-api-core
+    #   grpcio-status
+grpcio-status==1.71.0
+    # via google-api-core
+h11==0.16.0
+    # via
+    #   httpcore
+    #   uvicorn
+html5lib==1.1
+    # via unstructured
+htmltools==0.6.0
+    # via
+    #   faicons
+    #   great-tables
+httpcore==1.0.9
+    # via httpx
+httpx==0.28.1
+    # via
+    #   langsmith
+    #   openai
+    #   unstructured-client
+httpx-sse==0.4.1
+    # via langchain-community
+huggingface-hub==0.31.4
+    # via
+    #   accelerate
+    #   datasets
+    #   sentence-transformers
+    #   timm
+    #   tokenizers
+    #   transformers
+    #   unstructured-inference
+humanfriendly==10.0
+    # via coloredlogs
+idna==3.10
+    # via
+    #   anyio
+    #   httpx
+    #   requests
+    #   yarl
+importlib-metadata==8.7.0
+    # via great-tables
+importlib-resources==6.5.2
+    # via
+    #   adbc-driver-sqlite
+    #   great-tables
+install==1.3.5
+    # via uc202-ipn-rex
+intel-openmp==2021.4.0 ; sys_platform == 'win32'
+    # via mkl
+ipykernel==6.29.5
+    # via uc202-ipn-rex
+ipython==9.2.0
+    # via ipykernel
+ipython-pygments-lexers==1.1.1
+    # via ipython
+jedi==0.19.2
+    # via ipython
+jinja2==3.1.6
+    # via
+    #   altair
+    #   torch
+jiter==0.10.0
+    # via openai
+jmespath==1.0.1
+    # via
+    #   aiobotocore
+    #   boto3
+    #   botocore
+joblib==1.4.2
+    # via
+    #   nltk
+    #   scikit-learn
+jsonpatch==1.33
+    # via langchain-core
+jsonpointer==3.0.0
+    # via jsonpatch
+jsonschema==4.24.0
+    # via altair
+jsonschema-specifications==2025.4.1
+    # via jsonschema
+jupyter-client==8.6.3
+    # via ipykernel
+jupyter-core==5.7.2
+    # via
+    #   ipykernel
+    #   jupyter-client
+kiwisolver==1.4.8
+    # via matplotlib
+langchain==0.3.25
+    # via
+    #   langchain-community
+    #   uc202-ipn-rex
+langchain-community==0.3.21
+    # via uc202-ipn-rex
+langchain-core==0.3.65
+    # via
+    #   langchain
+    #   langchain-community
+    #   langchain-text-splitters
+langchain-text-splitters==0.3.8
+    # via langchain
+langdetect==1.0.9
+    # via unstructured
+langsmith==0.3.45
+    # via
+    #   langchain
+    #   langchain-community
+    #   langchain-core
+loguru==0.7.3
+    # via daptools
+lxml==5.4.0
+    # via
+    #   ebooklib
+    #   pikepdf
+    #   python-pptx
+    #   unstructured
+markdown==3.8
+    # via uc202-ipn-rex
+markdown-it-py==3.0.0
+    # via rich
+markupsafe==3.0.2
+    # via jinja2
+marshmallow==3.26.1
+    # via dataclasses-json
+matplotlib==3.10.3
+    # via
+    #   polars
+    #   pycocotools
+    #   unstructured-inference
+matplotlib-inline==0.1.7
+    # via
+    #   ipykernel
+    #   ipython
+mdurl==0.1.2
+    # via markdown-it-py
+mkl==2021.4.0 ; sys_platform == 'win32'
+    # via torch
+mmh3==5.1.0
+    # via pyiceberg
+mpmath==1.3.0
+    # via sympy
+multidict==6.4.4
+    # via
+    #   aiobotocore
+    #   aiohttp
+    #   yarl
+multiprocess==0.70.16
+    # via datasets
+mypy-extensions==1.1.0
+    # via typing-inspect
+narwhals==1.42.0
+    # via altair
+nest-asyncio==1.6.0
+    # via
+    #   ipykernel
+    #   unstructured-client
+networkx==3.4.2
+    # via torch
+nltk==3.9.1
+    # via unstructured
+numpy==1.26.4
+    # via
+    #   accelerate
+    #   awswrangler
+    #   contourpy
+    #   datasets
+    #   great-tables
+    #   langchain-community
+    #   matplotlib
+    #   onnx
+    #   onnxruntime
+    #   opencv-python
+    #   pandas
+    #   polars
+    #   pycocotools
+    #   scikit-learn
+    #   scipy
+    #   torchvision
+    #   transformers
+    #   uc202-ipn-rex
+    #   unstructured
+    #   unstructured-inference
+nvidia-cublas-cu12==12.1.3.1 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via
+    #   nvidia-cudnn-cu12
+    #   nvidia-cusolver-cu12
+    #   torch
+nvidia-cuda-cupti-cu12==12.1.105 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via torch
+nvidia-cuda-nvrtc-cu12==12.1.105 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via torch
+nvidia-cuda-runtime-cu12==12.1.105 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via torch
+nvidia-cudnn-cu12==8.9.2.26 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via torch
+nvidia-cufft-cu12==11.0.2.54 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via torch
+nvidia-curand-cu12==10.3.2.106 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via torch
+nvidia-cusolver-cu12==11.4.5.107 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via torch
+nvidia-cusparse-cu12==12.1.0.106 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via
+    #   nvidia-cusolver-cu12
+    #   torch
+nvidia-nccl-cu12==2.20.5 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via torch
+nvidia-nvjitlink-cu12==12.6.85 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via
+    #   nvidia-cusolver-cu12
+    #   nvidia-cusparse-cu12
+nvidia-nvtx-cu12==12.1.105 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via torch
+olefile==0.47
+    # via python-oxmsg
+omegaconf==2.3.0
+    # via effdet
+onnx==1.18.0
+    # via
+    #   unstructured
+    #   unstructured-inference
+onnxruntime==1.22.0
+    # via
+    #   unstructured
+    #   unstructured-inference
+openai==1.102.0
+    # via uc202-ipn-rex
+opencv-python==4.11.0.86
+    # via unstructured-inference
+openpyxl==3.1.5
+    # via
+    #   awswrangler
+    #   daptools
+    #   polars
+    #   uc202-ipn-rex
+orjson==3.10.18 ; platform_python_implementation != 'PyPy'
+    # via langsmith
+packaging==24.2
+    # via
+    #   accelerate
+    #   altair
+    #   awswrangler
+    #   datasets
+    #   htmltools
+    #   huggingface-hub
+    #   ipykernel
+    #   langchain-core
+    #   langsmith
+    #   marshmallow
+    #   matplotlib
+    #   onnxruntime
+    #   pikepdf
+    #   pytesseract
+    #   transformers
+    #   unstructured-pytesseract
+pandas==2.2.3
+    # via
+    #   adbc-driver-manager
+    #   adbc-driver-sqlite
+    #   awswrangler
+    #   daptools
+    #   datasets
+    #   polars
+    #   uc202-ipn-rex
+    #   unstructured-inference
+parso==0.8.4
+    # via jedi
+pdf2image==1.17.0
+    # via unstructured
+pdfminer-six==20250506
+    # via
+    #   unstructured
+    #   unstructured-inference
+pexpect==4.9.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
+    # via ipython
+pi-heif==0.22.0
+    # via unstructured
+pikepdf==9.7.0
+    # via unstructured
+pillow==11.2.1
+    # via
+    #   matplotlib
+    #   pdf2image
+    #   pi-heif
+    #   pikepdf
+    #   pytesseract
+    #   python-pptx
+    #   sentence-transformers
+    #   torchvision
+    #   uc202-ipn-rex
+    #   unstructured-pytesseract
+pip==25.1.1
+    # via uc202-ipn-rex
+platformdirs==4.3.8
+    # via jupyter-core
+polars==1.30.0
+    # via daptools
+prompt-toolkit==3.0.51
+    # via ipython
+propcache==0.3.1
+    # via
+    #   aiohttp
+    #   yarl
+proto-plus==1.26.1
+    # via
+    #   google-api-core
+    #   google-cloud-vision
+protobuf==5.29.4
+    # via
+    #   google-api-core
+    #   google-cloud-vision
+    #   googleapis-common-protos
+    #   grpcio-status
+    #   onnx
+    #   onnxruntime
+    #   proto-plus
+psutil==7.0.0
+    # via
+    #   accelerate
+    #   ipykernel
+    #   unstructured
+psycopg==3.2.10
+    # via daptools
+psycopg-binary==3.2.10 ; implementation_name != 'pypy'
+    # via psycopg
+psycopg-pool==3.2.6
+    # via psycopg
+ptyprocess==0.7.0 ; sys_platform != 'emscripten' and sys_platform != 'win32'
+    # via pexpect
+pure-eval==0.2.3
+    # via stack-data
+pyarrow==20.0.0
+    # via
+    #   adbc-driver-manager
+    #   adbc-driver-sqlite
+    #   awswrangler
+    #   daptools
+    #   datasets
+    #   fastexcel
+    #   polars
+pyasn1==0.6.1
+    # via
+    #   pyasn1-modules
+    #   rsa
+pyasn1-modules==0.4.2
+    # via google-auth
+pycocotools==2.0.8
+    # via effdet
+pycparser==2.22
+    # via cffi
+pydantic==2.11.4
+    # via
+    #   daptools
+    #   fastapi
+    #   langchain
+    #   langchain-core
+    #   langsmith
+    #   openai
+    #   polars
+    #   pydantic-settings
+    #   pyiceberg
+    #   unstructured-client
+pydantic-core==2.33.2
+    # via pydantic
+pydantic-settings==2.9.1
+    # via
+    #   daptools
+    #   langchain-community
+pygments==2.19.1
+    # via
+    #   ipython
+    #   ipython-pygments-lexers
+    #   rich
+pyiceberg==0.9.1
+    # via polars
+pymupdf==1.25.5
+    # via
+    #   pymupdf4llm
+    #   uc202-ipn-rex
+pymupdf4llm==0.0.24
+    # via uc202-ipn-rex
+pyparsing==3.2.3
+    # via
+    #   matplotlib
+    #   pyiceberg
+pypdf==5.5.0
+    # via
+    #   unstructured
+    #   unstructured-client
+pypdfium2==4.30.1
+    # via unstructured-inference
+pyreadline3==3.5.4 ; sys_platform == 'win32'
+    # via humanfriendly
+pytesseract==0.3.13
+    # via uc202-ipn-rex
+python-dateutil==2.9.0.post0
+    # via
+    #   aiobotocore
+    #   botocore
+    #   jupyter-client
+    #   matplotlib
+    #   pandas
+    #   strictyaml
+python-dotenv==1.1.0
+    # via
+    #   daptools
+    #   dotenv
+    #   pydantic-settings
+python-iso639==2025.2.18
+    # via unstructured
+python-magic==0.4.27
+    # via unstructured
+python-multipart==0.0.20
+    # via unstructured-inference
+python-oxmsg==0.0.2
+    # via unstructured
+python-pptx==1.0.2
+    # via textract
+pytz==2025.2
+    # via pandas
+pywin32==310 ; platform_python_implementation != 'PyPy' and sys_platform == 'win32'
+    # via jupyter-core
+pyxlsb==1.0.10
+    # via uc202-ipn-rex
+pyyaml==6.0.2
+    # via
+    #   accelerate
+    #   daptools
+    #   datasets
+    #   huggingface-hub
+    #   langchain
+    #   langchain-community
+    #   langchain-core
+    #   omegaconf
+    #   timm
+    #   transformers
+pyzmq==26.4.0
+    # via
+    #   ipykernel
+    #   jupyter-client
+rapidfuzz==3.13.0
+    # via
+    #   unstructured
+    #   unstructured-inference
+referencing==0.36.2
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
+regex==2024.11.6
+    # via
+    #   nltk
+    #   transformers
+requests==2.32.3
+    # via
+    #   datasets
+    #   google-api-core
+    #   huggingface-hub
+    #   langchain
+    #   langchain-community
+    #   langsmith
+    #   pyiceberg
+    #   requests-toolbelt
+    #   transformers
+    #   unstructured
+requests-toolbelt==1.0.0
+    # via
+    #   langsmith
+    #   unstructured-client
+rich==13.9.4
+    # via pyiceberg
+rpds-py==0.25.1
+    # via
+    #   jsonschema
+    #   referencing
+rsa==4.9.1
+    # via google-auth
+ruff==0.11.10
+    # via uc202-ipn-rex
+s3fs==2025.3.0
+    # via daptools
+s3transfer==0.13.1
+    # via boto3
+safetensors==0.5.3
+    # via
+    #   accelerate
+    #   timm
+    #   transformers
+scikit-learn==1.6.1
+    # via sentence-transformers
+scipy==1.12.0
+    # via
+    #   scikit-learn
+    #   sentence-transformers
+    #   unstructured-inference
+sentence-transformers==4.1.0
+    # via uc202-ipn-rex
+setuptools==80.9.0
+    # via
+    #   zope-event
+    #   zope-interface
+six==1.17.0
+    # via
+    #   ebooklib
+    #   html5lib
+    #   langdetect
+    #   python-dateutil
+    #   textract
+sniffio==1.3.1
+    # via
+    #   anyio
+    #   openai
+sortedcontainers==2.4.0
+    # via pyiceberg
+soupsieve==2.7
+    # via beautifulsoup4
+speechrecognition==3.14.3
+    # via textract
+sqlalchemy==2.0.41
+    # via
+    #   daptools
+    #   langchain
+    #   langchain-community
+    #   polars
+stack-data==0.6.3
+    # via ipython
+starlette==0.46.2
+    # via fastapi
+strictyaml==1.7.3
+    # via pyiceberg
+sympy==1.14.0
+    # via
+    #   onnxruntime
+    #   torch
+tbb==2021.13.1 ; sys_platform == 'win32'
+    # via mkl
+tenacity==9.1.2
+    # via
+    #   langchain-community
+    #   langchain-core
+    #   pyiceberg
+textract==1.5.0
+    # via uc202-ipn-rex
+threadpoolctl==3.6.0
+    # via scikit-learn
+timm==1.0.15
+    # via
+    #   effdet
+    #   unstructured-inference
+tokenizers==0.21.1
+    # via transformers
+torch==2.3.0
+    # via
+    #   accelerate
+    #   effdet
+    #   sentence-transformers
+    #   timm
+    #   torchvision
+    #   unstructured-inference
+torchvision==0.18.0
+    # via
+    #   effdet
+    #   timm
+tornado==6.5
+    # via
+    #   ipykernel
+    #   jupyter-client
+tqdm==4.67.1
+    # via
+    #   datasets
+    #   huggingface-hub
+    #   nltk
+    #   openai
+    #   sentence-transformers
+    #   transformers
+    #   unstructured
+traitlets==5.14.3
+    # via
+    #   comm
+    #   ipykernel
+    #   ipython
+    #   jupyter-client
+    #   jupyter-core
+    #   matplotlib-inline
+transformers==4.51.3
+    # via
+    #   sentence-transformers
+    #   unstructured-inference
+triton==2.3.0 ; platform_machine == 'x86_64' and sys_platform == 'linux'
+    # via torch
+typing-extensions==4.13.2
+    # via
+    #   adbc-driver-manager
+    #   altair
+    #   anyio
+    #   arro3-core
+    #   awswrangler
+    #   beautifulsoup4
+    #   daptools
+    #   fastapi
+    #   great-tables
+    #   htmltools
+    #   huggingface-hub
+    #   ipython
+    #   langchain-core
+    #   onnx
+    #   openai
+    #   psycopg
+    #   psycopg-pool
+    #   pydantic
+    #   pydantic-core
+    #   python-oxmsg
+    #   python-pptx
+    #   referencing
+    #   sentence-transformers
+    #   speechrecognition
+    #   sqlalchemy
+    #   torch
+    #   typing-inspect
+    #   typing-inspection
+    #   unstructured
+typing-inspect==0.9.0
+    # via dataclasses-json
+typing-inspection==0.4.0
+    # via
+    #   pydantic
+    #   pydantic-settings
+tzdata==2025.2
+    # via
+    #   pandas
+    #   polars
+    #   psycopg
+unstructured==0.17.2
+    # via uc202-ipn-rex
+unstructured-client==0.35.0
+    # via unstructured
+unstructured-inference==1.0.2
+    # via unstructured
+unstructured-pytesseract==0.3.15
+    # via unstructured
+urllib3==2.4.0
+    # via
+    #   botocore
+    #   elastic-transport
+    #   requests
+uvicorn==0.35.0
+    # via uc202-ipn-rex
+wcwidth==0.2.13
+    # via prompt-toolkit
+webencodings==0.5.1
+    # via html5lib
+win32-setctime==1.2.0 ; sys_platform == 'win32'
+    # via loguru
+wrapt==1.17.2
+    # via
+    #   aiobotocore
+    #   deprecated
+    #   unstructured
+xlrd==2.0.1
+    # via textract
+xlsx2csv==0.8.4
+    # via polars
+xlsxwriter==3.2.3
+    # via
+    #   polars
+    #   python-pptx
+xxhash==3.5.0
+    # via datasets
+yarl==1.20.0
+    # via aiohttp
+zipp==3.23.0
+    # via importlib-metadata
+zope-event==5.0
+    # via gevent
+zope-interface==7.2
+    # via gevent
+zstandard==0.23.0
+    # via langsmith

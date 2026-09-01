@@ -1,0 +1,66 @@
+[project]
+name = "uc202-ipn-rex"
+version = "0.1.0"
+description = "Chatbot pour REX IPN"
+readme = "README.md"
+requires-python = ">=3.11.0,<3.12"
+dependencies = [
+    "elasticsearch==8.10.0",
+    "numpy==1.26.4",
+    "dotenv>=0.9.9",
+    "install>=1.3.5",
+    "pandas",
+    "pip>=25.1.1",
+    "sentence-transformers[train]>=4.1.0",
+    "langchain>=0.3.25",
+    "daptools[postgres,s3]>=2.6.4",
+    "fastapi>=0.115.14",
+    "uvicorn>=0.35.0",
+    "langchain-community>=0.3.21",
+    "openai>=1.102.0",
+    "ipykernel>=6.29.5",
+    "ruff>=0.11.9",
+    "chardet>=5.2.0",
+    "pytesseract>=0.3.13",
+    "pillow>=11.2.1",
+    "pymupdf>=1.25.5",
+    "openpyxl>=3.1.5",
+    "docx2txt>=0.9",
+    "textract==1.5.0",
+    "pyxlsb>=1.0.10",
+    "ezodf>=0.3.2",
+    "markdown",
+
+]
+
+[tool.uv]
+allow-insecure-host = [
+  
+  "si-devops-repository.edf.fr",
+  "si-devops-mirror.edf.fr",
+  "nexus.retd.edf.fr"
+]
+
+[[tool.uv.index]]
+name = "pud-usine-pypi-release"
+url = "https://si-devops-repository.edf.fr/repository/pud-usine-pypi-release/simple"
+#explicit = true
+
+[[tool.uv.index]]
+name = "si-devops-mirror"
+url = "https://si-devops-mirror.edf.fr/repository/pypi.python.org/simple"
+default = true
+
+[[tool.uv.index]]
+name = "macao-pypi"
+url = "https://nexus.retd.edf.fr/repository/macao-pypi/simple"
+
+
+
+
+
+[tool.uv.sources]
+sm-generic = { path = "livraisons-standalone-kitten-2.2.1/sm_generic-2.2.0.tar.gz" }
+md-generic = { path = "livraisons-standalone-kitten-2.2.1/md_generic-2.2.0.tar.gz" }
+kitten = { path = "livraisons-standalone-kitten-2.2.1/kitten-2.2.1.tar.gz" }
+
